@@ -13,29 +13,40 @@ puts lines[1]
 puts 3
 puts lines[4]
 puts lines[-1]
-puts lines.drop(4)
+puts lines.drop(4) #needs to be puts lines.drop(4)[1], otherwise it's returning the array
 puts lines.last()
 puts lines.pop()
+puts lines.max
+# puts lines.at(4)
+# puts lines.fetch(4)  .fetch will throw a (possibly customised) error if there's nothing at that index
 
 # 4. Work out the index position of 'Haymarket'
 puts 4
 puts "Haymarket is at index position 3."
+# puts lines.index("Haymarket")
+
 # 5. Add 'Airport' to the start of the array
 puts 5
 lines.unshift("Airport")
 puts lines.join(", ")
+# puts lines.insert(0, "Airport")
+
 # 6. Add 'York Place' to the end of the array
 puts 6
 lines.push("York Place")
 puts lines.join(", ")
+
 # 7. Remove 'Edinburgh Park' from the array using it's name
 puts 7
 lines.delete("Edinburgh Park")
 puts lines.join(", ")
+
 # 8. Delete 'Edinburgh Park' from the array by index
 puts 8
 lines.delete_at(2)
 puts lines.join(", ")
+
+
 # 9. Reverse the positions of the stops in the array
 puts 9
 puts lines.reverse()
@@ -114,12 +125,15 @@ avrils_pet = users["Avril"][:pets]["colin"]
 puts avrils_pet
 # 5. Return the smallest of Erik's favorite numbers
 puts 5
-eriks_smallest_fave_number = eriks_fave_number.sort.shift
+eriks_smallest_fave_number = eriks_fave_number.sort.shift #use .first instead of .shift
 puts eriks_smallest_fave_number
 # 6. Add the number `7` to Erik's favorite numbers
-puts 6
+puts "Question 6"
 eriks_fave_number << 7
-puts eriks_fave_number
+puts eriks_fave_number  #This hasn't actually added it to the hash! Use below method!
+# users["Erik"][:favourite_numbers] << 7
+# puts users["Erik"][:favourite_numbers]
+
 # 7. Change Erik's hometown to Edinburgh
 puts 7
 users["Erik"][:home_town] = "Edinburgh"
