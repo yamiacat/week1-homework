@@ -1,3 +1,7 @@
+# I am imagining an imaginary menagerie
+# manager imagining managing an imaginary
+# menagerie.
+
 def pet_shop_name(shop_name)
   return shop_name[:name]
 end
